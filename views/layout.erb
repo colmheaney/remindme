@@ -1,0 +1,40 @@
+<!doctype html>  
+<html lang="en">  
+<head>  
+  <meta charset="utf8">  
+  <title><%= @title + ' | remind.me' %></title>  
+  <link href="/css/style.css" rel="stylesheet"> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->    
+
+</head>  
+<body>  
+  
+  <header>  
+    <hgroup>  
+      <h1><a href="/">remind.me</a></h1>  
+      <h2>because sometimes we all need reminding...</h2>  
+    </hgroup>  
+  </header>  
+
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+
+      <% if value.class == Array %>
+        <% value.each do |e| %>
+           <p><%= e %></p>
+        <% end %>
+      <% else %>
+        <p><%= value %></p>
+      <% end %>
+
+    </div>
+  <% end %>
+
+  <%= yield %>  
+
+</body>
+</html>

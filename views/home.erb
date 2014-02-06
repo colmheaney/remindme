@@ -1,0 +1,25 @@
+<section id="add">
+
+	<form action="/" method="post" id="reminder">
+		<input id="email" type="email" name="email" placeholder="your email address" required/>
+		<input id="name" name="name" title="don't fill this out if your a human" />
+        <textarea id="content" name="content" placeholder="write yourself a reminder..." ></textarea>
+        <div>
+			<input id="date" type="date" name="date" placeholder="dd-mm-yyyy" required/>
+		    <select name="repeat" form="reminder"  id="repeat">
+		    	<option value="no-repeat">don't repeat</option>
+		    	<option value="day">daily</option>
+		    	<option value="week">weekly</option>
+		    	<option value="month">monthly</option>
+		    	<option value="year">yearly</option>
+		    </select>
+        </div>
+	</form>
+
+	<input type="submit" form="reminder" value="Set reminder" id="submit">
+
+
+</section>
+
+
+
