@@ -5,7 +5,7 @@
 		<input id="name" name="name" title="don't fill this out if your a human" />
         <textarea id="content" name="content" placeholder="write yourself a reminder..." ></textarea>
         <div>
-			<input id="date" type="date" name="date" placeholder="dd-mm-yyyy" required/>
+			<input id="date" name="date" autocomplete="off" placeholder="date" required/>
 		    <select name="repeat" form="reminder"  id="repeat">
 		    	<option value="no-repeat">don't repeat</option>
 		    	<option value="day">daily</option>
@@ -18,6 +18,28 @@
 
 	<input type="submit" form="reminder" value="Set reminder" id="submit">
 
+<script>
+	$(function() {
+		$( "#date" ).datepicker({
+		  minDate: '+1D',
+		  maxDate: '+10Y',
+		  changeMonth: true,
+		  changeYear: true,
+		  dateFormat: 'dd/mm/yy'
+		});
+	});
+
+	$('#reminder').validate({
+	  errorPlacement: function(error, element) {
+	    if (element.attr("name") == "date") {
+		    error.appendTo( element.parent("div") );
+	    }
+	    else {
+	    	error.insertAfter( element );
+	    }
+	  }
+	});
+  </script>
 
 </section>
 

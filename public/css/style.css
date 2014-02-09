@@ -1,31 +1,25 @@
 body {  
     margin: 30px auto;  
     width: 500px; 
-    background-color: #ceeaf9; 
+    background-color: #19343C; 
     overflow: hidden;
-
 }  
-  
 p {
     margin: 0;
 }  
 header {  
     text-align: center;  
     margin: 0 0 20px;  
-
 }  
-
 header h1 {  
     display: inline;  
     font-size: 32px;  
 }  
-  
 header h1 a:link, header h1 a:visited {  
-    color: #ffb43c;
+    color: #589358;
     text-decoration: none; 
     text-shadow: 0px 1px 0px rgba(0,0,0,0.2);
 }  
-  
 header h2 {  
     font-size: 17px;  
     font-style: italic;  
@@ -80,7 +74,7 @@ textarea:focus, input:focus {
     width: 30%;
     margin: 15px auto 10px auto;
     clear: both;
-    background-color: #FA2;
+    background-color: #589358;
     border: none;
     box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
     cursor: pointer;
@@ -91,7 +85,7 @@ textarea:focus, input:focus {
      color: #fafafa;
 }
 #submit:hover {
-    background-color: #ffb43c;
+    background-color: #79a879;
 }
 #name {
     display:none;
